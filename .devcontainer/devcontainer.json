@@ -1,0 +1,30 @@
+{
+    "name": "MapsGatherer Dev",
+    "dockerComposeFile": [ "../docker-compose.yml" ],
+    "service": "devcontainer",
+    "workspaceFolder": "/workspace",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go",
+                "ms-azuretools.vscode-docker",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "streetsidesoftware.code-spell-checker"
+            ],
+            "settings": {
+                "go.toolsManagement.checkForUpdates": "local",
+                "go.useLanguageServer": true,
+                "go.gopath": "/go",
+                "go.formatTool": "gofmt",
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "true"
+                }
+            }
+        }
+    }
+}
