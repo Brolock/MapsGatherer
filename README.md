@@ -1,5 +1,8 @@
 # MapsGatherer
+
 Small App helping people find the most practical meetup point based of distances
+
+// Handle DB password + login in a safer way
 
 💡 Project Overview
 Build a web application that helps users find bars in Paris based on the geolocation of multiple people.
@@ -125,7 +128,6 @@ Isolation: Transactions don’t interfere with each other; intermediate states a
 Durability: Once a transaction is committed, it won’t be lost, even if there’s a crash.
 
 Check what GRPC
-
 
 // ROOM FOR IMPROVEMENTS
 I'm looking a bit ahead but thinking of improvements for the app. Adding other meeting places than bars. Coffes, restaurants, parks, shopping mall, gym...

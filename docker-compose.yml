@@ -5,7 +5,6 @@ services:
       dockerfile: .devcontainer/Dockerfile
     volumes:
       - .:/workspace:delegated
-      - /var/run/docker.sock:/var/run/docker.sock
       - ${SSH_AUTH_SOCK:-doesnotexist}/ssh-agent
     environment:
       - SSH_AUTH_SOCK=/ssh-agent
