@@ -111,6 +111,20 @@ Setup & usage instructions
 
 Explanation of data sourcing, DB/cache choices, and key trade-offs
 
+### Devcontainer / Coding from Docker -- specific configs
+
+I mount the ssh socket from the host to the docker container to be able to access git as if I was on the host, the SSH_AUTH_SOCK env variable should be set prior to instantiating the container. The socket should also be opened either by hand or more commonly using an agent + keychain.
+VSCode in WSL sometimes has a hard time with environment variable so don't hesitate to use a .env file
+I personally use a keychain + symbolic link to setup my ssh-agent socket
+
+```
+eval $(keychain --eval --agents ssh id_ed25519)
+ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh-agent.sock
+export SSH_AUTH_SOCK=~/.ssh/ssh-agent.sock
+```
+
+###
+
 Notes:
 Look into GORM for SQL lib https://gorm.io/docs/
 
